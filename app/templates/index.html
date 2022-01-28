@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Home - Welcome to the best news article website </title>
+        {% endif %}
+</head>
+<body>
+     <!-- Popular movie section  -->
+     <h3>News Headlines</h3>
+     <ul>
+        {% for popular_new in popular %}
+            <li>{{ popular_new.title}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
